@@ -33,17 +33,20 @@ const footerSections: FooterSection[] = [
 
 function Footer() {
   return (
-    <footer className="bg-[#1E1D61] max-w-[1100px] rounded-2xl mb-1 mx-4 md:mx-auto md:mb-10 text-white px-10">
-      <div className="flex flex-col md:flex-row gap-10 lg:gap-0 items-center md:items-start md:justify-between py-12">
+    <footer className="bg-[#1E1D61] mx-4 md:mx-auto text-white px-10">
+      <div className="flex flex-col md:flex-row gap-10 md:gap-44 items-center justify-center xl:-translate-x-[42px] md:items-start py-12">
         <div>
           <h1 className="font-bold pb-8 lg:pb-0 text-[27px]">Coursemate</h1>
         </div>
         {footerSections.map((section, index) => (
-          <div key={index} className="flex flex-col items-center">
+          <div
+            key={index}
+            className="flex flex-col items-center md:items-start"
+          >
             <h6 className="font-bold pb-3 text-[22px] md:text-[18px]">
               {section.title}
             </h6>
-            <div className="flex flex-col items-center gap-1">
+            <div className="flex flex-col items-center md:items-start gap-1">
               {section.links.map((link, idx) => (
                 <Link
                   className="text-[18px] md:text-[16px]"

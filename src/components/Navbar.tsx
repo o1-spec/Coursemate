@@ -6,7 +6,7 @@ function Navbar() {
 
   return (
     <div className="fixed md:relative top-0 left-0 w-full bg-white z-50">
-      <div className="flex items-center justify-between lg:px-32 px-5 md:px-12 py-6">
+      <div className="flex items-center justify-between max-w-[1100px] mx-auto px-5 md:px-12 py-6">
         <h4 className="font-bold text-3xl xl:text-2xl">Coursemate</h4>
         <div className="md:flex items-center gap-10 hidden">
           <Link to="" className="md:text-[17px]">
