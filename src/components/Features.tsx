@@ -24,6 +24,13 @@ function Features() {
         buttonText="Get Started"
         bgColor="bg-[#9B51E0]"
       />
+      <FeatureCard
+        label="Career Tests"
+        title="Improve on your weaknesses"
+        description="Access industry-proven tests and guides to identify your weaknesses and improve them."
+        buttonText="Get Started"
+        bgColor="bg-[#56CCF2]"
+      />
     </div>
   );
 }

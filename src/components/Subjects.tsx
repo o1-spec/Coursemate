@@ -1,54 +1,55 @@
 import { motion } from "framer-motion";
 
 function Subjects() {
-  return (
-    <div className="flex items-center justify-center px-3 overflow-hidden w-full">
-      <div className="flex flex-col gap-3 items-center justify-center pt-18 lg:pt-32 pb-10 max-w-[1000px] w-full">
-        {/* First Moving Row (Left) */}
-        <div className="w-full overflow-hidden">
-          <motion.div
-            className="flex gap-9 items-center whitespace-nowrap w-max"
-            animate={{ x: ["0%", "-100%"] }}
-            transition={{ repeat: Infinity, duration: 14, ease: "linear" }}
-          >
-            {/* Duplicate content for smooth looping */}
-            {[...Array(2)].map((_, i) => (
-              <div key={i} className="flex items-center gap-9">
-                <span className="text-[22px] font-bold">
-                  Software Engineering
-                </span>
-                <span className="w-4 h-4 bg-[#C31212] rounded-full"></span>
-                <span className="text-[22px] font-bold">Cyber Security</span>
-                <span className="w-4 h-4 bg-[#2AC171] rounded-full"></span>
-                <span className="text-[22px] font-bold">Accounting</span>
-                <span className="w-4 h-4 bg-[#FFB646] rounded-full"></span>
-                <span className="text-[22px] font-bold">Engineering</span>
-              </div>
-            ))}
-          </motion.div>
-        </div>
+  const rowOne = [
+    { name: "Software Engineering", color: "#C31212" },
+    { name: "Cyber Security", color: "#2AC171" },
+    { name: "Accounting", color: "#FFB646" },
+    { name: "Engineering", color: "#1E1D61" },
+  ];
 
-        {/* Second Moving Row (Right) */}
-        <div className="w-full overflow-hidden">
-          <motion.div
-            className="flex gap-9 items-center whitespace-nowrap w-max"
-            animate={{ x: ["-100%", "0%"] }}
-            transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
-          >
-            {/* Duplicate content for smooth looping */}
-            {[...Array(2)].map((_, i) => (
-              <div key={i} className="flex items-center gap-9">
-                <span className="text-[22px] font-bold">
-                  Finance Management
-                </span>
-                <span className="w-4 h-4 bg-[#1E1D61] rounded-full"></span>
-                <span className="text-[22px] font-bold">Product Design</span>
-                <span className="w-4 h-4 bg-[#9B51E0] rounded-full"></span>
-                <span className="text-[22px] font-bold">Human Resource</span>
-              </div>
-            ))}
-          </motion.div>
-        </div>
+  const rowTwo = [
+    { name: "Finance Management", color: "#9B51E0" },
+    { name: "Product Design", color: "#C31212" },
+    { name: "Human Resource", color: "#2AC171" },
+  ];
+
+  return (
+    <div className="flex flex-col gap-4 items-center justify-center pt-10 overflow-hidden max-w-[1000px] mx-auto bg-white py-5">
+      <div className="w-full overflow-hidden relative">
+        <motion.div
+          className="flex items-center whitespace-nowrap w-max"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+        >
+          {[...rowOne, ...rowOne].map((subject, index) => (
+            <div key={index} className="flex items-center">
+              <span className="text-[22px] font-bold px-5">{subject.name}</span>
+              <span
+                className="w-4 h-4 rounded-full"
+                style={{ backgroundColor: subject.color }}
+              ></span>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+
+      <div className="w-full overflow-hidden relative">
+        <motion.div
+          className="flex items-center whitespace-nowrap w-max"
+          animate={{ x: ["-50%", "0%"] }}
+          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+        >
+          {[...rowTwo, ...rowTwo].map((subject, index) => (
+            <div key={index} className="flex items-center">
+              <span className="text-[22px] font-bold px-5">{subject.name}</span>
+              <span
+                className="w-4 h-4 rounded-full"
+                style={{ backgroundColor: subject.color }}
+              ></span>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </div>
   );

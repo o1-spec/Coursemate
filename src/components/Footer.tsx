@@ -33,7 +33,7 @@ const footerSections: FooterSection[] = [
 
 function Footer() {
   return (
-    <footer className="bg-[#1E1D61] text-white px-10">
+    <footer className="bg-[#1E1D61] max-w-[1100px] rounded-2xl mb-10 mx-auto text-white px-10">
       <div className="flex flex-col md:flex-row gap-10 lg:gap-0 items-center md:items-start md:justify-between py-12">
         <div>
           <h1 className="font-bold pb-8 lg:pb-0 text-[27px]">Coursemate</h1>
