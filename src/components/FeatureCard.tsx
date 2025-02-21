@@ -23,7 +23,7 @@ function FeatureCard({
         <span className="text-[13px] rounded-lg border-[0.2px] border-[#F8F7FD] py-1.5 px-2">
           {label}
         </span>
-        <h6 className="font-bold text-4xl px-6 lg:px-10">{title}</h6>
+        <h6 className="font-bold text-4xl px-5 lg:px-10">{title}</h6>
         <p className="text-center text-[15px] md:text-[16px] px-4">
           {description}
         </p>
